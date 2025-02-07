@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Reporting.Map.WebForms.BingMaps;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ExFinal.Modelos;
+using System.Data.SqlClient;
+using ExFinal.Config;
 
 namespace ExFinal.Modelos
 {

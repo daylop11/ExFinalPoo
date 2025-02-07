@@ -30,12 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.gestion_EqDeportivosDataSet1 = new ExFinal.Gestion_EqDeportivosDataSet1();
             this.gestionEqDeportivosDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_EqDeportivosDataSet1)).BeginInit();
+            this.gestion_EqDeportivosDataSet1 = new ExFinal.Gestion_EqDeportivosDataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEqDeportivosDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestion_EqDeportivosDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gestionEqDeportivosDataSet1BindingSource
+            // 
+            this.gestionEqDeportivosDataSet1BindingSource.DataSource = this.gestion_EqDeportivosDataSet1;
+            this.gestionEqDeportivosDataSet1BindingSource.Position = 0;
+            // 
+            // gestion_EqDeportivosDataSet1
+            // 
+            this.gestion_EqDeportivosDataSet1.DataSetName = "Gestion_EqDeportivosDataSet1";
+            this.gestion_EqDeportivosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -48,16 +58,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(560, 304);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // gestion_EqDeportivosDataSet1
-            // 
-            this.gestion_EqDeportivosDataSet1.DataSetName = "Gestion_EqDeportivosDataSet1";
-            this.gestion_EqDeportivosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gestionEqDeportivosDataSet1BindingSource
-            // 
-            this.gestionEqDeportivosDataSet1BindingSource.DataSource = this.gestion_EqDeportivosDataSet1;
-            this.gestionEqDeportivosDataSet1BindingSource.Position = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // frmRepPartidos
             // 
@@ -69,8 +70,8 @@
             this.Name = "frmRepPartidos";
             this.Text = "frmRepPartidos";
             this.Load += new System.EventHandler(this.frmRepPartidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gestion_EqDeportivosDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEqDeportivosDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestion_EqDeportivosDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

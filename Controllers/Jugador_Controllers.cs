@@ -22,17 +22,17 @@ namespace ExFinal.Controllers
                     using (var comando = new SqlCommand(cadena, conexion))
                     {
                         conexion.Open();
-                        using (var lector = comando.ExecuteReader())
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        while (lector.Read())
                         {
-                            while (lector.Read())
+                            var jugador = new Jugador_Models
                             {
-                                var jugador = new Jugador_Models
-                                {
-                                    ID = (int)lector["ID"],
-                                    Nombre = (string)lector["Nombre"],
-                                    Posicion = (string)lector["Posicion"],
-                                    ID_Equipo = lector["ID_Equipo"] as int?
-                                };
+                                ID = (int)lector["ID"],
+                                Nombre = (string)lector["Nombre"],
+                                Posicion = (string)lector["Posicion"],
+                                ID_Equipo = (int)lector["ID_Equipo"]
+                            }
                                 listaJugadores.Add(jugador);
                             }
                         }

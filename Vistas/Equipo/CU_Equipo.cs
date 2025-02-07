@@ -24,7 +24,7 @@ namespace ExFinal.Vistas.Equipo
 
         private void btnAgregarCU_Click(object sender, EventArgs e)
         {
-            btnAgregarCU.Enabled = false;
+            btnCancelarCU.Enabled = false;
         }
 
         private void btnBuscarCU_Click(object sender, EventArgs e)

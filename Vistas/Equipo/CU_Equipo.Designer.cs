@@ -31,7 +31,7 @@
             this.LblBuscar = new System.Windows.Forms.Label();
             this.btnBuscarCU = new System.Windows.Forms.Button();
             this.txtCuEquipo = new System.Windows.Forms.TextBox();
-            this.btnAgregarCU = new System.Windows.Forms.Button();
+            this.btnCancelarCU = new System.Windows.Forms.Button();
             this.PnlBuscar1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgwEquipo = new System.Windows.Forms.DataGridView();
@@ -67,15 +67,15 @@
             this.txtCuEquipo.TabIndex = 6;
             this.txtCuEquipo.TextChanged += new System.EventHandler(this.txtCuEquipo_TextChanged);
             // 
-            // btnAgregarCU
+            // btnCancelarCU
             // 
-            this.btnAgregarCU.Location = new System.Drawing.Point(385, 47);
-            this.btnAgregarCU.Name = "btnAgregarCU";
-            this.btnAgregarCU.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarCU.TabIndex = 5;
-            this.btnAgregarCU.Text = "Agregar";
-            this.btnAgregarCU.UseVisualStyleBackColor = true;
-            this.btnAgregarCU.Click += new System.EventHandler(this.btnAgregarCU_Click);
+            this.btnCancelarCU.Location = new System.Drawing.Point(385, 47);
+            this.btnCancelarCU.Name = "btnCancelarCU";
+            this.btnCancelarCU.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarCU.TabIndex = 5;
+            this.btnCancelarCU.Text = "Cancelar";
+            this.btnCancelarCU.UseVisualStyleBackColor = true;
+            this.btnCancelarCU.Click += new System.EventHandler(this.btnAgregarCU_Click);
             // 
             // PnlBuscar1
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.btnBuscarCU);
             this.Controls.Add(this.txtCuEquipo);
-            this.Controls.Add(this.btnAgregarCU);
+            this.Controls.Add(this.btnCancelarCU);
             this.Controls.Add(this.PnlBuscar1);
             this.Name = "frmCU_Equipo";
             this.Text = "CU_Equipo";
@@ -128,7 +128,7 @@
         private System.Windows.Forms.Label LblBuscar;
         private System.Windows.Forms.Button btnBuscarCU;
         private System.Windows.Forms.TextBox txtCuEquipo;
-        private System.Windows.Forms.Button btnAgregarCU;
+        private System.Windows.Forms.Button btnCancelarCU;
         private System.Windows.Forms.Panel PnlBuscar1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgwEquipo;
