@@ -21,8 +21,8 @@ namespace ExFinal
 
         private void btnEquipo_Click(object sender, EventArgs e)
         {
-         frmEquiposReport equipos = new frmEquiposReport();
-            equipos.ShowDialog();
+            frmCU_Equipo equipo = new frmCU_Equipo();
+            equipo.Show();
         }
 
         private void btnJugador_Click(object sender, EventArgs e)
@@ -42,28 +42,35 @@ namespace ExFinal
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             btnSave_Click equipos=new btnSave_Click();
             equipos.ShowDialog();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        public void btnEdit_Click(object sender, EventArgs e)
         {
             btnEdit_Click equipos=new btnEdit_Click();
             equipos.ShowDialog();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        public void btnCerrar_Click(object sender, EventArgs e)
         {
             btnCerrar_Click equipos=new btnCerrar_Click();
             equipos.ShowDialog();
         }
     }
 
-    internal class btnCerrar_Click
+    internal class frmEquiposReport
     {
         internal void ShowDialog()
+        {
+        }
+    }
+
+    public class btnCerrar_Click
+    {
+        public void ShowDialog()
         {
         }
     }

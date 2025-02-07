@@ -73,6 +73,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Gestion_EqDeportivosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Gestion_EqDeportivosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gestion_EqDeportivosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_EqDeportivosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gestion_EqDeportivosDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,17 +95,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vistas\Equipo\CU_Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Equipo\CU_Equipo.Designer.cs">
+      <DependentUpon>CU_Equipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Equipo\Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Equipo\Equipo.Designer.cs">
       <DependentUpon>Equipo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Equipo\Equipo_CU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Equipo\Equipo_CU.Designer.cs">
-      <DependentUpon>Equipo_CU.cs</DependentUpon>
     </Compile>
     <Compile Include="Control_User\Equipo_CU.cs">
       <SubType>UserControl</SubType>
@@ -127,19 +137,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Equipo\CU_Equipo.resx">
+      <DependentUpon>CU_Equipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Equipo\Equipo.resx">
       <DependentUpon>Equipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Equipo\Equipo_CU.resx">
-      <DependentUpon>Equipo_CU.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Partido\Inform.rdlc" />
     <EmbeddedResource Include="Control_User\Equipo_CU.resx">
       <DependentUpon>Equipo_CU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Jugador\Jugador.resx">
       <DependentUpon>Jugador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Partido\Fechas_Partidos.rdlc" />
     <EmbeddedResource Include="Vistas\Partido\Partido.resx">
       <DependentUpon>Partido.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +163,28 @@
     </None>
     <None Include="Gestion_EqDeportivosDataSet.xss">
       <DependentUpon>Gestion_EqDeportivosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet1.xsc">
+      <DependentUpon>Gestion_EqDeportivosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Gestion_EqDeportivosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet1.xss">
+      <DependentUpon>Gestion_EqDeportivosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet2.xsc">
+      <DependentUpon>Gestion_EqDeportivosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Gestion_EqDeportivosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Gestion_EqDeportivosDataSet2.xss">
+      <DependentUpon>Gestion_EqDeportivosDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
