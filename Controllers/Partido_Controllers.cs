@@ -10,13 +10,13 @@ namespace ExFinal.Controllers
 {
     public class Partido_Controllers
     {
-        public readonly Conexion cn = new Conexion();
-
-        public int ID { get; private set; }
-        public int ID_Equipo1 { get; private set; }
-        public int ID_Equipo2 { get; private set; }
-        public DateTime Fecha { get; private set; }
-        public string Resultado { get; private set; }
+        
+        public readonly conexion cn = new conexion();
+        public int ID { get;set; }
+        public int ID_Equipo1 { get;set; }
+        public int ID_Equipo2 { get;set; }
+        public DateTime Fecha { get;set; }
+        public string Resultado { get;set; }
 
         public List<Partido_Controllers> ObtenerPartidos()
         {

@@ -10,26 +10,26 @@ namespace ExFinal.Vistas
 {
     public partial class frmPartido : Form
     {
-        private object comboBoxEq2Checked;
+        public object comboBoxEq2Checked;
 
-        public object comboBoxEq1SelectedIndex { get; private set; }
-        public object comboBoxEq1Checked { get; private set; }
-        public object ID { get; private set; }
-        public object Nombre { get; private set; }
-        public object Ciudad { get; private set; }
+        public object comboBoxEq1SelectedIndex { get; set; }
+        public object comboBoxEq1Checked { get; set; }
+        public object ID { get; set; }
+        public object Nombre { get;set; }
+        public object Ciudad { get;set; }
 
         public frmPartido()
         {
             InitializeComponent();
         }
 
-        private void btnGuardarPartido_Click(object sender, EventArgs e)
+        public void btnGuardarPartido_Click(object sender, EventArgs e)
         {
             btnGuardarPartido.Enabled = false;
             string text = txtNameTeam.Text;
         }
 
-        private void btnEditarPartido_Click(object sender, EventArgs e)
+        public void btnEditarPartido_Click(object sender, EventArgs e)
         {
             btnEditarPartido.Enabled = true;
             string text = txtNameTeam.Text; text = txtNameTeam.Text;
@@ -39,7 +39,7 @@ namespace ExFinal.Vistas
             }       
         
 
-        private void btnDeletePatido_Click(object sender, EventArgs e)
+        public void btnDeletePatido_Click(object sender, EventArgs e)
         {
             btnDeletePatido.Enabled = false;
         }
@@ -48,22 +48,22 @@ namespace ExFinal.Vistas
         {
         }
 
-        private void txtNameTeam_TextChanged(object sender, EventArgs e)
+        public void txtNameTeam_TextChanged(object sender, EventArgs e)
         {
             txtNameTeam.Enabled = true;
         }
 
-        private void comboBoxEq1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBoxEq1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBoxEq1Checked = true;
         }
 
-        private void ComboBoxEq2_SelectedIndexChanged(object sender, EventArgs e)
+        public void ComboBoxEq2_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBoxEq2Checked = true;
         }
 
-        private void frmPartido_Load(object sender, EventArgs e)
+        public void frmPartido_Load(object sender, EventArgs e)
         {
             this.equipoTableAdapter.Fill(this.gestion_EqDeportivosDataSet.Equipo);
 

@@ -11,7 +11,7 @@ namespace ExFinal.Controllers
 {
     public class Jugador_Controllers
     {
-        private object cn;
+        public object cn;
 
         public List<Jugador_Models> ObtenerJugadores()
             {

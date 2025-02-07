@@ -11,7 +11,7 @@ namespace ExFinal.Controllers
 {
     public class Equipo_Controllers
     {
-        public readonly Conexion cn = new Conexion();
+        public readonly conexion cn = new conexion();
 
         public List<Equipo_Models> ObtenerEquipos()
         {
