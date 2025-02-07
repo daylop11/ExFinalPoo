@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExFinal.Config
 {
-    class conexion
+    public class conexion
     {
         public readonly string cadenaConexion =
             "Server=(local);database=Sistemasroles;uid=sa;pwd=123";

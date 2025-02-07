@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExFinal.Controllers;
+using ExFinal.Modelos;
 
 namespace ExFinal.Vistas
 {
@@ -16,7 +18,8 @@ namespace ExFinal.Vistas
         {
             InitializeComponent();
         }
-
+        private Equipo_Controllers equipoControllers = new Equipo_Controllers();
+ 
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -31,6 +34,7 @@ namespace ExFinal.Vistas
         {
             string text = txtNameEq.Text;
             string text2 = txtCiudad.Text;
+           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

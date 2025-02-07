@@ -6,17 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using ExFinal.Config;
 using ExFinal.Modelos;
+using ExFinal.Controllers;
+
 
 namespace ExFinal.Controllers
 {
     public class Jugador_Controllers
     {
-        public object cn;
+        public conexion cn = new conexion();
 
         public List<Jugador_Models> ObtenerJugadores()
             {
                 var listaJugadores = new List<Jugador_Models>();
-            using (var conexion = cn.obtenerConexion())
+            using (var conexion = cn.obtenerConexion()) 
                 {
                     string cadena = "SELECT * FROM Jugador";
                     using (var comando = new SqlCommand(cadena, conexion))
@@ -32,7 +34,7 @@ namespace ExFinal.Controllers
                                 Nombre = (string)lector["Nombre"],
                                 Posicion = (string)lector["Posicion"],
                                 ID_Equipo = (int)lector["ID_Equipo"]
-                            }
+                            };
                                 listaJugadores.Add(jugador);
                             }
                         }
