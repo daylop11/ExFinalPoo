@@ -85,10 +85,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="Vistas\Equipo.cs">
+    <Compile Include="Vistas\Equipo\Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Equipo.Designer.cs">
+    <Compile Include="Vistas\Equipo\Equipo.Designer.cs">
       <DependentUpon>Equipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Equipo\Equipo_CU.cs">
@@ -97,16 +97,22 @@
     <Compile Include="Vistas\Equipo\Equipo_CU.Designer.cs">
       <DependentUpon>Equipo_CU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Jugador.cs">
+    <Compile Include="Control_User\Equipo_CU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_User\Equipo_CU.Designer.cs">
+      <DependentUpon>Equipo_CU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Jugador\Jugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Jugador.Designer.cs">
+    <Compile Include="Vistas\Jugador\Jugador.Designer.cs">
       <DependentUpon>Jugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Partido.cs">
+    <Compile Include="Vistas\Partido\Partido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Partido.Designer.cs">
+    <Compile Include="Vistas\Partido\Partido.Designer.cs">
       <DependentUpon>Partido.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Inicio.resx">
@@ -121,17 +127,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Equipo.resx">
+    <EmbeddedResource Include="Vistas\Equipo\Equipo.resx">
       <DependentUpon>Equipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Equipo\Equipo_CU.resx">
       <DependentUpon>Equipo_CU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Inform.rdlc" />
-    <EmbeddedResource Include="Vistas\Jugador.resx">
+    <EmbeddedResource Include="Vistas\Partido\Inform.rdlc" />
+    <EmbeddedResource Include="Control_User\Equipo_CU.resx">
+      <DependentUpon>Equipo_CU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Jugador\Jugador.resx">
       <DependentUpon>Jugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Partido.resx">
+    <EmbeddedResource Include="Vistas\Partido\Partido.resx">
       <DependentUpon>Partido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Gestion_EqDeportivosDataSet.xsc">
@@ -159,7 +168,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

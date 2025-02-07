@@ -1,6 +1,6 @@
 ﻿namespace ExFinal.Vistas
 {
-    partial class Jugador
+    partial class frmJugador
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.btnDeletePlayer = new System.Windows.Forms.Button();
-            this.btnEditarPlayer = new System.Windows.Forms.Button();
             this.btnGuardarPlayer = new System.Windows.Forms.Button();
             this.lblAggPlayer = new System.Windows.Forms.Label();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtPosition = new System.Windows.Forms.TextBox();
             this.txtNamePlayer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNamePlayer = new System.Windows.Forms.Label();
@@ -45,35 +44,22 @@
             this.btnDeletePlayer.BackColor = System.Drawing.Color.Silver;
             this.btnDeletePlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePlayer.Location = new System.Drawing.Point(408, 414);
+            this.btnDeletePlayer.Location = new System.Drawing.Point(295, 414);
             this.btnDeletePlayer.Name = "btnDeletePlayer";
-            this.btnDeletePlayer.Size = new System.Drawing.Size(81, 46);
+            this.btnDeletePlayer.Size = new System.Drawing.Size(103, 62);
             this.btnDeletePlayer.TabIndex = 16;
             this.btnDeletePlayer.Text = "Eliminar";
             this.btnDeletePlayer.UseVisualStyleBackColor = false;
             this.btnDeletePlayer.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEditarPlayer
-            // 
-            this.btnEditarPlayer.BackColor = System.Drawing.Color.Silver;
-            this.btnEditarPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPlayer.Location = new System.Drawing.Point(277, 414);
-            this.btnEditarPlayer.Name = "btnEditarPlayer";
-            this.btnEditarPlayer.Size = new System.Drawing.Size(81, 46);
-            this.btnEditarPlayer.TabIndex = 15;
-            this.btnEditarPlayer.Text = "Editar";
-            this.btnEditarPlayer.UseVisualStyleBackColor = false;
-            this.btnEditarPlayer.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardarPlayer
             // 
             this.btnGuardarPlayer.BackColor = System.Drawing.Color.Silver;
             this.btnGuardarPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPlayer.Location = new System.Drawing.Point(148, 414);
+            this.btnGuardarPlayer.Location = new System.Drawing.Point(165, 414);
             this.btnGuardarPlayer.Name = "btnGuardarPlayer";
-            this.btnGuardarPlayer.Size = new System.Drawing.Size(81, 46);
+            this.btnGuardarPlayer.Size = new System.Drawing.Size(103, 62);
             this.btnGuardarPlayer.TabIndex = 14;
             this.btnGuardarPlayer.Text = "Guardar";
             this.btnGuardarPlayer.UseVisualStyleBackColor = false;
@@ -91,14 +77,14 @@
             this.lblAggPlayer.Text = "AGREGAR JUGADOR";
             this.lblAggPlayer.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtCiudad
+            // txtPosition
             // 
-            this.txtCiudad.BackColor = System.Drawing.Color.Silver;
-            this.txtCiudad.Location = new System.Drawing.Point(68, 241);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(454, 20);
-            this.txtCiudad.TabIndex = 12;
-            this.txtCiudad.TextChanged += new System.EventHandler(this.txtCiudad_TextChanged);
+            this.txtPosition.BackColor = System.Drawing.Color.Silver;
+            this.txtPosition.Location = new System.Drawing.Point(68, 241);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(454, 20);
+            this.txtPosition.TabIndex = 12;
+            this.txtPosition.TextChanged += new System.EventHandler(this.txtCiudad_TextChanged);
             // 
             // txtNamePlayer
             // 
@@ -154,7 +140,7 @@
             this.comboBox1.Size = new System.Drawing.Size(452, 21);
             this.comboBox1.TabIndex = 18;
             // 
-            // Jugador
+            // frmJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,14 +149,13 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeletePlayer);
-            this.Controls.Add(this.btnEditarPlayer);
             this.Controls.Add(this.btnGuardarPlayer);
             this.Controls.Add(this.lblAggPlayer);
-            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.txtNamePlayer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNamePlayer);
-            this.Name = "Jugador";
+            this.Name = "frmJugador";
             this.Text = "Jugador";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,10 +165,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnDeletePlayer;
-        private System.Windows.Forms.Button btnEditarPlayer;
         private System.Windows.Forms.Button btnGuardarPlayer;
         private System.Windows.Forms.Label lblAggPlayer;
-        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.TextBox txtNamePlayer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNamePlayer;

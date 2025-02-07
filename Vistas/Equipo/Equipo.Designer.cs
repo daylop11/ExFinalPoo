@@ -67,6 +67,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEditar
             // 
@@ -79,6 +80,7 @@
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -91,6 +93,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblAggEquíp
             // 
@@ -111,6 +114,7 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(454, 20);
             this.txtCiudad.TabIndex = 4;
+            this.txtCiudad.TextChanged += new System.EventHandler(this.txtCiudad_TextChanged);
             // 
             // txtNameEq
             // 
@@ -120,6 +124,7 @@
             this.txtNameEq.Name = "txtNameEq";
             this.txtNameEq.Size = new System.Drawing.Size(454, 20);
             this.txtNameEq.TabIndex = 3;
+            this.txtNameEq.TextChanged += new System.EventHandler(this.txtNameEq_TextChanged);
             // 
             // label2
             // 
