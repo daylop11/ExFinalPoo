@@ -33,9 +33,9 @@
             this.lblAggPlayer = new System.Windows.Forms.Label();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.txtNamePlayer = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LblPosition = new System.Windows.Forms.Label();
             this.lblNamePlayer = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblTeam = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -96,17 +96,17 @@
             this.txtNamePlayer.TabIndex = 11;
             this.txtNamePlayer.TextChanged += new System.EventHandler(this.txtNameEq_TextChanged);
             // 
-            // label2
+            // LblPosition
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(64, 218);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Posicion:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.LblPosition.AutoSize = true;
+            this.LblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPosition.ForeColor = System.Drawing.Color.White;
+            this.LblPosition.Location = new System.Drawing.Point(64, 218);
+            this.LblPosition.Name = "LblPosition";
+            this.LblPosition.Size = new System.Drawing.Size(81, 20);
+            this.LblPosition.TabIndex = 10;
+            this.LblPosition.Text = "Posicion:";
+            this.LblPosition.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblNamePlayer
             // 
@@ -120,16 +120,16 @@
             this.lblNamePlayer.Text = "Nombre del jugador:";
             this.lblNamePlayer.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label1
+            // LblTeam
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 273);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Equipo:";
+            this.LblTeam.AutoSize = true;
+            this.LblTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTeam.ForeColor = System.Drawing.Color.White;
+            this.LblTeam.Location = new System.Drawing.Point(64, 273);
+            this.LblTeam.Name = "LblTeam";
+            this.LblTeam.Size = new System.Drawing.Size(70, 20);
+            this.LblTeam.TabIndex = 17;
+            this.LblTeam.Text = "Equipo:";
             // 
             // comboBox1
             // 
@@ -147,13 +147,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(584, 531);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblTeam);
             this.Controls.Add(this.btnDeletePlayer);
             this.Controls.Add(this.btnGuardarPlayer);
             this.Controls.Add(this.lblAggPlayer);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.txtNamePlayer);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LblPosition);
             this.Controls.Add(this.lblNamePlayer);
             this.Name = "frmJugador";
             this.Text = "Jugador";
@@ -169,9 +169,9 @@
         private System.Windows.Forms.Label lblAggPlayer;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.TextBox txtNamePlayer;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblPosition;
         private System.Windows.Forms.Label lblNamePlayer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblTeam;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

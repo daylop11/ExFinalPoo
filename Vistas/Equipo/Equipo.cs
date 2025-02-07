@@ -29,7 +29,8 @@ namespace ExFinal.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            btnGuardar.Enabled = false;
+            string text = txtNameEq.Text;
+            string text2 = txtCiudad.Text;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

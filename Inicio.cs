@@ -65,8 +65,12 @@ namespace ExFinal
 
         private void btnRp_Click(object sender, EventArgs e)
         {
-            btnRp_Click partido=new btnRp_Click();
-            partido.ShowDialog();
+            frmRepPartidos equipos = new frmRepPartidos();
+            equipos.ShowDialog();
+        }
+        
+        btnRp_Click partido=new btnRp_Click();
+            
         }
     }
 
@@ -104,4 +108,3 @@ namespace ExFinal
         {
         }
     }
-}

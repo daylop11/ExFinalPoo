@@ -11,12 +11,12 @@ namespace ExFinal.Controllers
 {
     public class Jugador_Controllers
     {
-            public readonly Conexion cn = new Conexion();
+        private object cn;
 
-            public List<Jugador_Models> ObtenerJugadores()
+        public List<Jugador_Models> ObtenerJugadores()
             {
                 var listaJugadores = new List<Jugador_Models>();
-                using (var conexion = cn.obtenerConexion())
+            using (var conexion = cn.obtenerConexion())
                 {
                     string cadena = "SELECT * FROM Jugador";
                     using (var comando = new SqlCommand(cadena, conexion))

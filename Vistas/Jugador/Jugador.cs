@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExFinal.Vistas;
 
 namespace ExFinal.Vistas
 {
     public partial class frmJugador : Form
     {
+        public object textNamePlayer { get; private set; }
+
         public frmJugador()
         {
             InitializeComponent();
@@ -27,12 +30,14 @@ namespace ExFinal.Vistas
            
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        public void btnGuardar_Click(object sender, EventArgs e)
         {
             btnGuardarPlayer.Enabled = true;
+           string text= txtPosition.Text;
+
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void btnDelete_Click(object sender, EventArgs e)
         {
             btnDeletePlayer.Enabled = false;
         }

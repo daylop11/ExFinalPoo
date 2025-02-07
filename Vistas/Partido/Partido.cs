@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ExFinal.Vistas;
-using ExFinal.Properties;
-using ExFinal.Controllers;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ExFinal.Config; 
 
 namespace ExFinal.Vistas
+
 {
     public partial class frmPartido : Form
     {
@@ -19,6 +14,9 @@ namespace ExFinal.Vistas
 
         public object comboBoxEq1SelectedIndex { get; private set; }
         public object comboBoxEq1Checked { get; private set; }
+        public object ID { get; private set; }
+        public object Nombre { get; private set; }
+        public object Ciudad { get; private set; }
 
         public frmPartido()
         {
@@ -28,16 +26,26 @@ namespace ExFinal.Vistas
         private void btnGuardarPartido_Click(object sender, EventArgs e)
         {
             btnGuardarPartido.Enabled = false;
+            string text = txtNameTeam.Text;
         }
 
         private void btnEditarPartido_Click(object sender, EventArgs e)
         {
             btnEditarPartido.Enabled = true;
+            string text = txtNameTeam.Text; text = txtNameTeam.Text;
         }
+            public void ActualizarEquipo(frmPartido partido)
+        {
+            }       
+        
 
         private void btnDeletePatido_Click(object sender, EventArgs e)
         {
             btnDeletePatido.Enabled = false;
+        }
+
+        public void EliminarEquipo(int id)
+        {
         }
 
         private void txtNameTeam_TextChanged(object sender, EventArgs e)
@@ -57,7 +65,6 @@ namespace ExFinal.Vistas
 
         private void frmPartido_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'gestion_EqDeportivosDataSet.Equipo' Puede moverla o quitarla según sea necesario.
             this.equipoTableAdapter.Fill(this.gestion_EqDeportivosDataSet.Equipo);
 
         }
