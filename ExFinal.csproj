@@ -107,12 +107,6 @@
     <Compile Include="Vistas\Equipo\Equipo.Designer.cs">
       <DependentUpon>Equipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control_User\Equipo_CU.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control_User\Equipo_CU.Designer.cs">
-      <DependentUpon>Equipo_CU.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Jugador\Jugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Equipo\Equipo.resx">
       <DependentUpon>Equipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control_User\Equipo_CU.resx">
-      <DependentUpon>Equipo_CU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Jugador\Jugador.resx">
       <DependentUpon>Jugador.cs</DependentUpon>

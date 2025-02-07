@@ -37,10 +37,11 @@
             this.btnJugador = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PnlEditClose = new System.Windows.Forms.Panel();
+            this.btnRp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.PnlEditClose.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +87,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 83);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 72);
             this.pictureBox1.TabIndex = 5;
@@ -127,7 +128,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(315, 73);
+            this.btnCerrar.Location = new System.Drawing.Point(387, 73);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(99, 64);
             this.btnCerrar.TabIndex = 1;
@@ -140,7 +141,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(185, 73);
+            this.btnEdit.Location = new System.Drawing.Point(247, 73);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 64);
             this.btnEdit.TabIndex = 4;
@@ -148,14 +149,29 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // panel2
+            // PnlEditClose
             // 
-            this.panel2.Controls.Add(this.btnCerrar);
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Location = new System.Drawing.Point(0, 301);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(584, 232);
-            this.panel2.TabIndex = 6;
+            this.PnlEditClose.Controls.Add(this.btnRp);
+            this.PnlEditClose.Controls.Add(this.btnCerrar);
+            this.PnlEditClose.Controls.Add(this.btnEdit);
+            this.PnlEditClose.Location = new System.Drawing.Point(0, 301);
+            this.PnlEditClose.Name = "PnlEditClose";
+            this.PnlEditClose.Size = new System.Drawing.Size(584, 232);
+            this.PnlEditClose.TabIndex = 6;
+            this.PnlEditClose.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlEditClose_Paint);
+            // 
+            // btnRp
+            // 
+            this.btnRp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.btnRp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRp.Location = new System.Drawing.Point(123, 73);
+            this.btnRp.Name = "btnRp";
+            this.btnRp.Size = new System.Drawing.Size(99, 64);
+            this.btnRp.TabIndex = 5;
+            this.btnRp.Text = "Reporte Partidos";
+            this.btnRp.UseVisualStyleBackColor = false;
+            this.btnRp.Click += new System.EventHandler(this.btnRp_Click);
             // 
             // frmMenu
             // 
@@ -164,14 +180,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(584, 531);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PnlEditClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu";
             this.Text = "Menú Inicio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.PnlEditClose.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -186,7 +202,8 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label LbelWelcome;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PnlEditClose;
+        private System.Windows.Forms.Button btnRp;
     }
 }
 

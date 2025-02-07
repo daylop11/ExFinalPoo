@@ -30,8 +30,11 @@
                             <TextRun>
                               <Value>ID Equipo1</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>LightGrey</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -66,8 +69,11 @@
                             <TextRun>
                               <Value>ID Equipo2</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>Silver</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -102,8 +108,11 @@
                             <TextRun>
                               <Value>Fecha</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>Silver</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -145,6 +154,7 @@
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <Color>Silver</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -181,6 +191,7 @@
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <Color>Silver</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -217,6 +228,7 @@
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>12pt</FontSize>
+                                <Color>Silver</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -274,7 +286,12 @@
       </Tablix>
     </ReportItems>
     <Height>3.08333in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>#213555</BackgroundColor>
+    </Style>
   </Body>
   <Width>5.80208in</Width>
   <Page>
@@ -292,8 +309,10 @@
                 <TextRun>
                   <Value>PROXIMAS FECHAS A PARTIDOS</Value>
                   <Style>
-                    <FontFamily>Arial Narrow</FontFamily>
-                    <FontSize>18pt</FontSize>
+                    <FontFamily>Arial Black</FontFamily>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -303,10 +322,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.86995cm</Top>
-          <Left>3.70099cm</Left>
-          <Height>0.83812cm</Height>
-          <Width>8.56306cm</Width>
+          <Top>0.52599cm</Top>
+          <Left>3.06599cm</Left>
+          <Height>1.92333cm</Height>
+          <Width>9.96062cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -322,9 +341,9 @@
           <Value>calendar</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.52599cm</Top>
-          <Left>0.97578cm</Left>
-          <Height>1.5cm</Height>
-          <Width>1.5cm</Width>
+          <Left>0.7112cm</Left>
+          <Height>1.92333cm</Height>
+          <Width>1.76458cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -337,6 +356,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>#213555</BackgroundColor>
       </Style>
     </PageHeader>
     <PageHeight>29.7cm</PageHeight>
