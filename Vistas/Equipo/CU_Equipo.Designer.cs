@@ -31,12 +31,13 @@
             this.LblBuscar = new System.Windows.Forms.Label();
             this.btnBuscarCU = new System.Windows.Forms.Button();
             this.txtCuEquipo = new System.Windows.Forms.TextBox();
-            this.btnCancelarCU = new System.Windows.Forms.Button();
             this.PnlBuscar1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgwEquipo = new System.Windows.Forms.DataGridView();
+            this.dgvEquipo = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.PnlBuscar1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwEquipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipo)).BeginInit();
             this.SuspendLayout();
             // 
             // LblBuscar
@@ -51,7 +52,7 @@
             // 
             // btnBuscarCU
             // 
-            this.btnBuscarCU.Location = new System.Drawing.Point(466, 47);
+            this.btnBuscarCU.Location = new System.Drawing.Point(395, 47);
             this.btnBuscarCU.Name = "btnBuscarCU";
             this.btnBuscarCU.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarCU.TabIndex = 7;
@@ -67,18 +68,10 @@
             this.txtCuEquipo.TabIndex = 6;
             this.txtCuEquipo.TextChanged += new System.EventHandler(this.txtCuEquipo_TextChanged);
             // 
-            // btnCancelarCU
-            // 
-            this.btnCancelarCU.Location = new System.Drawing.Point(385, 47);
-            this.btnCancelarCU.Name = "btnCancelarCU";
-            this.btnCancelarCU.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarCU.TabIndex = 5;
-            this.btnCancelarCU.Text = "Cancelar";
-            this.btnCancelarCU.UseVisualStyleBackColor = true;
-            this.btnCancelarCU.Click += new System.EventHandler(this.btnAgregarCU_Click);
-            // 
             // PnlBuscar1
             // 
+            this.PnlBuscar1.Controls.Add(this.btnAgregar);
+            this.PnlBuscar1.Controls.Add(this.btnBuscarCU);
             this.PnlBuscar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlBuscar1.Location = new System.Drawing.Point(0, 0);
             this.PnlBuscar1.Name = "PnlBuscar1";
@@ -87,20 +80,30 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgwEquipo);
+            this.panel2.Controls.Add(this.dgvEquipo);
             this.panel2.Location = new System.Drawing.Point(-6, 95);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 395);
             this.panel2.TabIndex = 10;
             // 
-            // dgwEquipo
+            // dgvEquipo
             // 
-            this.dgwEquipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwEquipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgwEquipo.Location = new System.Drawing.Point(0, 0);
-            this.dgwEquipo.Name = "dgwEquipo";
-            this.dgwEquipo.Size = new System.Drawing.Size(574, 395);
-            this.dgwEquipo.TabIndex = 2;
+            this.dgvEquipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEquipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEquipo.Location = new System.Drawing.Point(0, 0);
+            this.dgvEquipo.Name = "dgvEquipo";
+            this.dgvEquipo.Size = new System.Drawing.Size(574, 395);
+            this.dgvEquipo.TabIndex = 2;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(481, 47);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmCU_Equipo
             // 
@@ -110,14 +113,14 @@
             this.ClientSize = new System.Drawing.Size(568, 492);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.LblBuscar);
-            this.Controls.Add(this.btnBuscarCU);
             this.Controls.Add(this.txtCuEquipo);
-            this.Controls.Add(this.btnCancelarCU);
             this.Controls.Add(this.PnlBuscar1);
             this.Name = "frmCU_Equipo";
             this.Text = "CU_Equipo";
+            this.Load += new System.EventHandler(this.frmCU_Equipo_Load);
+            this.PnlBuscar1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwEquipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,9 +131,9 @@
         private System.Windows.Forms.Label LblBuscar;
         private System.Windows.Forms.Button btnBuscarCU;
         private System.Windows.Forms.TextBox txtCuEquipo;
-        private System.Windows.Forms.Button btnCancelarCU;
         private System.Windows.Forms.Panel PnlBuscar1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgwEquipo;
+        private System.Windows.Forms.DataGridView dgvEquipo;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

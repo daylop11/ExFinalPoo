@@ -10,7 +10,7 @@ namespace ExFinal.Config
     public class conexion
     {
         public readonly string cadenaConexion =
-            "Server=(local);database=Sistemasroles;uid=sa;pwd=123";
+            "Server=(local);database=Gestion_EqDeportivos;uid=sa;pwd=123";
 
         public SqlConnection obtenerConexion()
         {

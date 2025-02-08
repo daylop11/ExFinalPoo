@@ -19,14 +19,16 @@ namespace ExFinal
         }
         private void btnJugador_Click(object sender, EventArgs e)
         {
-            frmAgregarEquipo equipos=new frmAgregarEquipo();
-            equipos.ShowDialog();
+
+
+            //frmJugador jugador = new frmJugador();
+            //jugador.ShowDialog();
         }
 
         private void btnPartido_Click(object sender, EventArgs e)
         {
-            frmPartido equipos=new frmPartido();
-            equipos.ShowDialog();
+            frmPartido partidos=new frmPartido();
+            partidos.ShowDialog();
         }
 
         public void LbelWelcome_Click(object sender, EventArgs e)

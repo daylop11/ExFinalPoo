@@ -32,9 +32,19 @@ namespace ExFinal.Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string text = txtNameEq.Text;
-            string text2 = txtCiudad.Text;
-           
+            if(txtNameEq.Text == "" || txtCiudad.Text == "")
+            {
+                MessageBox.Show("Debe rellenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Equipo_Models equipo = new Equipo_Models
+            {
+                Nombre = txtNameEq.Text,
+                Ciudad = txtCiudad.Text
+            };
+            var mensaje = equipoControllers.AgregarEquipo(equipo);
+            MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

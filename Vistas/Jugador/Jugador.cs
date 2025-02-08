@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExFinal.Controllers;
+using ExFinal.Modelos;
 using ExFinal.Vistas;
 
 namespace ExFinal.Vistas
@@ -19,7 +21,8 @@ namespace ExFinal.Vistas
         {
             InitializeComponent();
         }
-
+        private Equipo_Controllers equipoControllers = new Equipo_Controllers();
+        private Jugador_Controllers jugador_Controllers = new Jugador_Controllers();
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -42,12 +45,19 @@ namespace ExFinal.Vistas
 
         public void btnGuardar_Click(object sender, EventArgs e)
         {
-       
-            string nombre = txtNamePlayer.Text;
-            string telefono = txtPosition.Text;
-
-            string datos = $"Nombre: {nombre}, Posicion: {txtPosition}";
-            string file= "datos_guardados.txt";
+            if(txtNamePlayer.Text == "" || txtPosition.Text == "")
+            {
+                MessageBox.Show("Debe rellenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Jugador_Models jugador = new Jugador_Models
+            {
+                Nombre = txtNamePlayer.Text,
+                Posicion = txtPosition.Text,
+                ID_Equipo = (int)comboBox1.SelectedValue
+            };
+            var mensaje = jugador_Controllers.insertar(jugador);
+            MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             try
             {
@@ -57,8 +67,7 @@ namespace ExFinal.Vistas
             {
                 MessageBox.Show($"Error al guardar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            btnGuardarPlayer.Enabled = true;
-           string text= txtPosition.Text;
+
             
         }
 
@@ -92,6 +101,14 @@ namespace ExFinal.Vistas
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmJugador_Load(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = equipoControllers.ObtenerEquipos();
+
+            comboBox1.ValueMember = "ID";
+            comboBox1.DisplayMember = "Nombre";
         }
     }
 }

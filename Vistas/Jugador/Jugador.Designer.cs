@@ -157,6 +157,7 @@
             this.Controls.Add(this.lblNamePlayer);
             this.Name = "frmJugador";
             this.Text = "Jugador";
+            this.Load += new System.EventHandler(this.frmJugador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

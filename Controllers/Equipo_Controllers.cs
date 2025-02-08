@@ -12,7 +12,7 @@ namespace ExFinal.Controllers
     public class Equipo_Controllers
     {
         public conexion cn = new conexion();
-        // perate
+        
 
         public List<Equipo_Models> ObtenerEquipos()
         {
@@ -32,6 +32,7 @@ namespace ExFinal.Controllers
                                 ID = (int)lector["ID"],
                                 Nombre = (string)lector["Nombre"],
                                 Ciudad = (string)lector["Ciudad"]
+                                
                             };
                             listaEquipos.Add(equipo);
                         }
@@ -40,7 +41,7 @@ namespace ExFinal.Controllers
             }
             return listaEquipos;
         }
-        public void AgregarEquipo(Equipo_Models equipo)
+        public string AgregarEquipo(Equipo_Models equipo)
         {
             using (var conexion = cn.obtenerConexion())
             {
@@ -50,7 +51,14 @@ namespace ExFinal.Controllers
                     comando.Parameters.AddWithValue("@Nombre", equipo.Nombre);
                     comando.Parameters.AddWithValue("@Ciudad", equipo.Ciudad);
                     conexion.Open();
-                    comando.ExecuteNonQuery();
+                    if(comando.ExecuteNonQuery() == 1)
+                    {
+                        return "Equipo agregado";
+                    }else
+                    {
+                        return "Error al agragar equipo";
+                    }
+                    
                 }
             }
         }

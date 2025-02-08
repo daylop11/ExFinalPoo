@@ -4,7 +4,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ExFinal.Config;
+using ExFinal.Modelos;
 
 namespace ExFinal.Controllers
 {
@@ -47,19 +49,31 @@ namespace ExFinal.Controllers
             return listaPartidos;
         }
         
-    public void AgregarPartido(Partido_Controllers partido)
+    public string AgregarPartido(Partido_Models partido)
         {
             using (var conexion = cn.obtenerConexion())
             {
+                MessageBox.Show("@ID_Equipo2 - " + partido.id_Equipo2);
+                MessageBox.Show("@ID_Equipo1 - " + partido.id_Equipo1);
+                
                 string cadena = "INSERT INTO Partido (ID_Equipo1, ID_Equipo2, Fecha, Resultado) VALUES (@ID_Equipo1, @ID_Equipo2, @Fecha, @Resultado)";
                 using (var comando = new SqlCommand(cadena, conexion))
                 {
-                    comando.Parameters.AddWithValue("@ID_Equipo1", partido.ID_Equipo1);
-                    comando.Parameters.AddWithValue("@ID_Equipo2", partido.ID_Equipo2);
+
+                    comando.Parameters.AddWithValue("@ID_Equipo1", partido.id_Equipo1);
+                    comando.Parameters.AddWithValue("@ID_Equipo2", partido.id_Equipo2);
                     comando.Parameters.AddWithValue("@Fecha", partido.Fecha);
                     comando.Parameters.AddWithValue("@Resultado", partido.Resultado ?? (object)DBNull.Value);
                     conexion.Open();
-                    comando.ExecuteNonQuery();
+
+                    if (comando.ExecuteNonQuery() != 0)
+                    {
+                        return "OK";
+                    }
+                    else
+                    {
+                        return "Error";
+                    }
                 }
             }
         }

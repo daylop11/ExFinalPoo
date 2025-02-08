@@ -113,12 +113,6 @@
     <Compile Include="Vistas\frmRepPartidos.Designer.cs">
       <DependentUpon>frmRepPartidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Jugador\Jugador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Jugador\Jugador.Designer.cs">
-      <DependentUpon>Jugador.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Partido\Partido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmRepPartidos.resx">
       <DependentUpon>frmRepPartidos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Jugador\Jugador.resx">
-      <DependentUpon>Jugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Partido\Fechas_Partidos.rdlc" />
     <EmbeddedResource Include="Vistas\Partido\Partido.resx">

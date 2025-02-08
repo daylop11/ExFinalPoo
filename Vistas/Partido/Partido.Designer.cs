@@ -35,7 +35,7 @@
             this.btnEditarPartido = new System.Windows.Forms.Button();
             this.btnGuardarPartido = new System.Windows.Forms.Button();
             this.lblAggPartido = new System.Windows.Forms.Label();
-            this.txtNameTeam = new System.Windows.Forms.TextBox();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNamePlayer = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -125,15 +125,15 @@
             this.lblAggPartido.TabIndex = 23;
             this.lblAggPartido.Text = "AGREGAR PARTIDO";
             // 
-            // txtNameTeam
+            // txtResultado
             // 
-            this.txtNameTeam.BackColor = System.Drawing.Color.Silver;
-            this.txtNameTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.txtNameTeam.Location = new System.Drawing.Point(67, 194);
-            this.txtNameTeam.Name = "txtNameTeam";
-            this.txtNameTeam.Size = new System.Drawing.Size(454, 20);
-            this.txtNameTeam.TabIndex = 21;
-            this.txtNameTeam.TextChanged += new System.EventHandler(this.txtNameTeam_TextChanged);
+            this.txtResultado.BackColor = System.Drawing.Color.Silver;
+            this.txtResultado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.txtResultado.Location = new System.Drawing.Point(67, 194);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(454, 20);
+            this.txtResultado.TabIndex = 21;
+            this.txtResultado.TextChanged += new System.EventHandler(this.txtNameTeam_TextChanged);
             // 
             // label2
             // 
@@ -221,7 +221,7 @@
             this.Controls.Add(this.btnEditarPartido);
             this.Controls.Add(this.btnGuardarPartido);
             this.Controls.Add(this.lblAggPartido);
-            this.Controls.Add(this.txtNameTeam);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNamePlayer);
             this.Name = "frmPartido";
@@ -242,7 +242,7 @@
         private System.Windows.Forms.Button btnEditarPartido;
         private System.Windows.Forms.Button btnGuardarPartido;
         private System.Windows.Forms.Label lblAggPartido;
-        private System.Windows.Forms.TextBox txtNameTeam;
+        private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNamePlayer;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
