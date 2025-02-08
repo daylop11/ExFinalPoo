@@ -29,7 +29,7 @@ namespace ExFinal
             equipos.ShowDialog();
         }
 
-        private void LbelWelcome_Click(object sender, EventArgs e)
+        public void LbelWelcome_Click(object sender, EventArgs e)
         {
 
         }
@@ -52,7 +52,7 @@ namespace ExFinal
             equipos.ShowDialog();
         }
 
-        private void PnlEditClose_Paint(object sender, PaintEventArgs e)
+        public void PnlEditClose_Paint(object sender, PaintEventArgs e)
         {
         }
 
